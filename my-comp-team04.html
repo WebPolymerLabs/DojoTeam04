@@ -1,0 +1,84 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../favico.js/favico.js"></script>
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <my-comp-team04 fav-url="myfav.ico" badge-text="10"></my-comp-team04>
+
+Example:
+
+    <my-comp-team04>
+      <h2>Hello my-comp-team04</h2>
+    </my-comp-team04>
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="my-comp-team04">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+    <span>[[badgeText]]</span>
+    
+  </template>
+ 
+
+  <script>
+    Polymer({
+      is: 'my-comp-team04',
+
+      properties: {
+        badgeText: {
+          type: String
+        }
+      },
+
+      // Element Lifecycle
+
+      ready: function() {
+        // `ready` is called after all elements have been configured, but
+        // propagates bottom-up. This element's children are ready, but parents
+        // are not.
+        //
+        // This is the point where you should make modifications to the DOM (when
+        // necessary), or kick off any processes the element wants to perform.
+        
+         this.favicon=new Favico({
+            animation:'slide'
+        });
+        
+        },
+        
+      setBadgeText: function(val) {
+         this.favicon.badge(val);
+      },
+
+      attached: function() {
+        // `attached` fires once the element and its parents have been inserted
+        // into a document.
+        //
+        // This is a good place to perform any work related to your element's
+        // visual state or active behavior (measuring sizes, beginning animations,
+        // loading resources, etc).
+        this.setBadgeText(this.badgeText);
+      },
+
+      detached: function() {
+        // The analog to `attached`, `detached` fires when the element has been
+        // removed from a document.
+        //
+        // Use this to clean up anything you did in `attached`.
+      },
+
+      // Element Behavior
+    });
+  </script>
+</dom-module>

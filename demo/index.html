@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>my-comp-team01 Demo</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.ico">
+  <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../paper-material/paper-material.html">
+  <link rel="import" href="../../iron-input/iron-input.html">
+  <link rel="import" href="../my-comp-team04.html">
+  <style is="custom-style" include="demo-pages-shared-styles">
+    paper-material {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    
+    paper-material p {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  </style>
+</head>
+
+<body unresolved>
+  <template is="dom-bind" id="app">
+    <style is="custom-style">
+      body {
+        background-color: var(--light-primary-color);
+      }
+      
+      paper-material {
+        background-color: white;
+        margin: 24px;
+        padding: 16px;
+      }
+    </style>
+    <div class="horizontal-section-container">
+      <div class="vertical-section">
+        <demo-snippet>
+          <input is="iron-input" bind-value="{{myValue}}">
+          <my-comp-team04 badge-text="{{myValue}}"></my-comp-team04>
+        </demo-snippet>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('WebComponentsReady', function() {
+          
+          var app = document.querySelector('#app');
+                    
+        });
+    </script>
+  </template>
+</body>
+
+</html>
