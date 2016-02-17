@@ -1,0 +1,39 @@
+{
+  "name": "my-comp-team04",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "my-comp-team04.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.4",
+    "favico.js": "ejci/favico.js#^0.3.10"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^3.4.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#~1.0.3",
+    "iron-input": "PolymerElements/iron-input#^1.0.8"
+  },
+  "_release": "20836fd346",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "20836fd346ec01843894e5eeb989975d9e38a7a5"
+  },
+  "_source": "git://github.com/WebPolymerLabs/DojoTeam04.git",
+  "_target": "master",
+  "_originalSource": "WebPolymerLabs/DojoTeam04",
+  "_direct": true
+}
