@@ -41,17 +41,21 @@
     <div class="horizontal-section-container">
       <div class="vertical-section">
         <demo-snippet>
+          <input is="iron-input" bind-value="{{myValueImg}}">
           <input is="iron-input" bind-value="{{myValue}}">
-          <my-comp-team04 badge-text="{{myValue}}"></my-comp-team04>
+          <my-comp-team04 badge-text="{{myValue}}" badge-img="{{myValueImg}}"></my-comp-team04>
+            <span>[[myValue]]</span>
+            <img src$='[[myValueImg]]'>
         </demo-snippet>
       </div>
+      
+      
+      
     </div>
     <script>
       window.addEventListener('WebComponentsReady', function() {
-          
-          var app = document.querySelector('#app');
-                    
-        });
+        var app = document.querySelector('#app');
+      });  
     </script>
   </template>
 </body>
